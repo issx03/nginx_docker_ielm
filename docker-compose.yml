@@ -16,7 +16,7 @@ services:
       - app-content
     # Puerto del proxy
     ports:
-      - "1234:80"
+      - "80:80"
 
 networks:
   nginx-net:
