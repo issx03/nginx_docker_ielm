@@ -1,0 +1,47 @@
+/* Cards */
+.card:has(.home-menu-image) a {
+    cursor: url("../../../assets/images/cursor/menu.png"), pointer;
+}
+
+.card:has(.home-wine-image) a {
+    cursor: url("../../../assets/images/cursor/wine.png"), pointer;
+}
+
+.card:has(.home-contact-image) a {
+    cursor: url("../../../assets/images/cursor/phone.png"), pointer;
+}
+
+.home-card-image {
+    width: 100%;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-menu-image {
+    background: linear-gradient(
+        135deg,
+        var(--primary-medium) 0%,
+        var(--primary-dark) 100%
+    );
+}
+
+.home-wine-image {
+    background: linear-gradient(
+        135deg,
+        var(--neutral-medium) 0%,
+        var(--neutral-dark) 100%
+    );
+}
+
+.home-contact-image {
+    background: linear-gradient(135deg, var(--accent-orange) 0%, #b57a2d 100%);
+}
+
+.home-section-icon {
+    z-index: 1;
+    width: 160px;
+}

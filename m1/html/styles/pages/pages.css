@@ -1,0 +1,146 @@
+body:not(.landing) {
+    font-family: 'Arimo', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+        135deg,
+        var(--bg-dark) 0%,
+        var(--secondary-dark) 100%
+    );
+}
+
+main:not(.landing) {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0px 40px 80px;
+}
+
+/* Sections Container */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--bg-darker);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(30, 68, 71, 0.1);
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(30, 68, 71, 0.2);
+    border-color: var(--border-light);
+}
+
+.card a {
+    display: block;
+    text-decoration: none;
+}
+
+.card-content {
+    padding: 30px;
+}
+
+.card:hover path.svg-hv-color {
+    fill: #77767b;
+    transition: fill 0.3s ease;
+}
+
+.card-content h3 {
+    font-family: 'Antic Slab', serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: var(--secondary-light);
+}
+
+.card-content p {
+    font-family: 'Arimo', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary-light);
+    line-height: 1.5;
+}
+
+@media (width > 1024px) {
+    h1.title {
+        font-size: 48px;
+    }
+    h2.title {
+        font-size: 32px;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    h1.title {
+        font-size: 38px;
+    }
+    h2.title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    main:not(.landing) {
+        padding: 30px 20px 50px;
+    }
+
+    .cards-container {
+        gap: 25px;
+    }
+    .card h3 {
+        font-size: 20px;
+    }
+    .card-content p {
+        font-size: 14px;
+    }
+
+    h1.title {
+        font-size: 34px;
+    }
+
+    h2.title {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 540px) {
+    .cards-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .card-image {
+        height: 220px;
+    }
+
+    .card-icon {
+        font-size: 60px;
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+
+    h1.title {
+        font-size: 30px;
+    }
+    h2.title {
+        font-size: 24px;
+    }
+}

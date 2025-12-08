@@ -1,0 +1,18 @@
+/* CTA Content */
+.cta-content {
+    color: white;
+    z-index: 10;
+    max-width: 600px;
+    padding: 1rem;
+}
+
+.cta-content h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}

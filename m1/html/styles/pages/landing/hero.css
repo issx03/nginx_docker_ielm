@@ -1,0 +1,11 @@
+.hero {
+    height: 100vh;
+    background-image: url(../../../assets/images/main-landing-wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

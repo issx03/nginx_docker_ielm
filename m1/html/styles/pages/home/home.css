@@ -1,0 +1,30 @@
+@import url('./hero.css');
+@import url('./sections-content.css');
+
+body.home {
+    font-family: 'Arimo', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+        135deg,
+        var(--bg-dark) 0%,
+        var(--secondary-dark) 100%
+    );
+    color: var(--neutral-dark);
+}
+
+main.home {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0px 40px 80px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main.home {
+        padding: 30px 20px 50px;
+    }
+}

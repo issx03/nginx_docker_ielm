@@ -1,0 +1,49 @@
+@import url('./pages/home/home.css');
+@import url('./pages/pages.css');
+@import url('./layout/header.css');
+@import url('./layout/footer.css');
+@import url('./pages/landing/landing.css');
+@import url('./pages/menu/menu.css');
+@import url('./pages/wines/wines.css');
+@import url('./pages/contact/contact.css');
+
+@font-face {
+    font-family: 'Antic Slab';
+    src: url('../assets/fonts/AnticSlab-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('../assets/fonts/Arimo-VariableFont_wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors from style guide */
+    --primary-dark: #1e4447;
+    --secondary-dark: #3f5657;
+    --primary-medium: #708586;
+    --primary-light: #bcbeb7;
+    --secondary-light: #c8c3bc;
+    --accent-orange: #d09238;
+    --neutral-dark: #413143;
+    --neutral-medium: #727272;
+    --neutral-light: #8eabbd;
+    --neutral-lighter: #8b8d8e;
+    --neutral-lightest: #a67d85;
+    --border-light: #3b7176;
+    --bg-light: #d9e4e5;
+    --bg-dark: #243435;
+    --bg-darker: #181a1b;
+    --bg-accent: #8eabad;
+    --white: #ffffff;
+    --primary-font: 'Antic Slab', serif;
+    --secondary-font: 'Arimo', sans-serif;
+}

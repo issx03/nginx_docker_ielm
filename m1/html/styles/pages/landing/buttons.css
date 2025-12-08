@@ -1,0 +1,54 @@
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Language Buttons */
+.lang-btn {
+    background: #d59360;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.15s ease, background 0.25s ease,
+        color 0.2s ease;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    width: 200px;
+    color: #663612;
+}
+
+.lang-btn:hover {
+    background: #b6875c;
+    transform: translateY(-3px);
+    color: #ffc69a;
+}
+
+.lang-btn:active {
+    transform: scale(0.92);
+    background: #d59360;
+    color: #663612;
+}
+
+.lang-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+    transform: none;
+}
+
+.lang-btn.es {
+    border-bottom: 2px solid #e60000;
+}
+
+.lang-btn.en {
+    border-bottom: 2px solid #00247d;
+}
+
+.lang-btn a {
+    text-decoration: none;
+    color: inherit;
+}

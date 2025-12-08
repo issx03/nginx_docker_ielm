@@ -1,0 +1,25 @@
+@import url('./hero.css');
+@import url('./cta.css');
+@import url('./buttons.css');
+
+.landing {
+    font-family: 'Antic Slab', serif;
+}
+
+/* Overlay for hero section */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 720px) {
+    .cta-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+        margin: auto;
+    }
+}

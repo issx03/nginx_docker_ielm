@@ -1,0 +1,16 @@
+@import url("./items.css");
+
+.card-content .menu-item-title {
+    color: var(--neutral-dark);
+}
+
+.card-content .menu-item-description {
+    color: var(--neutral-medium);
+}
+
+.card-content .menu-item-price {
+    display: block;
+    padding: 10px 0px;
+    font-weight: bold;
+    color: var(--accent-orange);
+}

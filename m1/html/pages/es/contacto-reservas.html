@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Contacto y Reservas - Kiosko Fernando</title>
+        <link
+            rel="stylesheet"
+            href="../../styles/index.css"
+        />
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <a
+                    href="./home.html"
+                    class="logo"
+                >
+                    <img
+                        src="../../assets/images/main-logo.png"
+                        alt="Logo Kiosko Fernando"
+                    />
+                </a>
+                <nav>
+                    <a href="./home.html">INICIO</a>
+                    <a href="./menu.html">MENU</a>
+                    <a href="./carta-vinos.html">CARTA DE VINOS</a>
+                    <a href="./contacto-reservas.html"
+                        >CONTACTO Y RESERVAS</a
+                    >
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <h1 class="contact-title title">CONTACTO Y RESERVAS</h1>
+            <div class="contact-container">
+                <!-- Form Section -->
+                <section class="form-section">
+                    <h2 class="contact-title title">
+                        Reserva tu mesa
+                    </h2>
+                    <form id="reservationForm">
+                        <article class="form-item">
+                            <label for="name"
+                                >Nombre completo *</label
+                            >
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                placeholder="Tu nombre"
+                            />
+                        </article>
+
+                        <article class="form-item">
+                            <label for="email">Email *</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                placeholder="ejemplo@email.com"
+                            />
+                        </article>
+
+                        <article class="form-item">
+                            <label for="date">Fecha *</label>
+                            <input
+                                type="date"
+                                id="date"
+                                name="date"
+                                required
+                            />
+                        </article>
+
+                        <article class="form-item">
+                            <label for="time">Hora *</label>
+                            <input
+                                type="time"
+                                id="time"
+                                name="time"
+                                required
+                            />
+                        </article>
+
+                        <article class="form-item">
+                            <label
+                                >Selecciona una parte de la barra
+                                *</label
+                            >
+                            <div class="radio-items">
+                                <label class="radio-label">
+                                    <input
+                                        type="radio"
+                                        name="barSection"
+                                        value="1"
+                                        required
+                                    />
+                                    <span class="radio-text"
+                                        >Espacio 1</span
+                                    >
+                                </label>
+                                <label class="radio-label">
+                                    <input
+                                        type="radio"
+                                        name="barSection"
+                                        value="2"
+                                        required
+                                    />
+                                    <span class="radio-text"
+                                        >Espacio 2</span
+                                    >
+                                </label>
+                                <label class="radio-label">
+                                    <input
+                                        type="radio"
+                                        name="barSection"
+                                        value="3"
+                                        required
+                                    />
+                                    <span class="radio-text"
+                                        >Espacio 3</span
+                                    >
+                                </label>
+                                <label class="radio-label">
+                                    <input
+                                        type="radio"
+                                        name="barSection"
+                                        value="4"
+                                        required
+                                    />
+                                    <span class="radio-text"
+                                        >Espacio 4</span
+                                    >
+                                </label>
+                                <label class="radio-label">
+                                    <input
+                                        type="radio"
+                                        name="barSection"
+                                        value="5"
+                                        required
+                                    />
+                                    <span class="radio-text"
+                                        >Espacio 5</span
+                                    >
+                                </label>
+                                <label class="radio-label">
+                                    <input
+                                        type="radio"
+                                        name="barSection"
+                                        value="6"
+                                        required
+                                    />
+                                    <span class="radio-text"
+                                        >Espacio 6</span
+                                    >
+                                </label>
+                                <label class="radio-label">
+                                    <input
+                                        type="radio"
+                                        name="barSection"
+                                        value="7"
+                                        required
+                                    />
+                                    <span class="radio-text"
+                                        >Espacio 7</span
+                                    >
+                                </label>
+                                <label class="radio-label">
+                                    <input
+                                        type="radio"
+                                        name="barSection"
+                                        value="8"
+                                        required
+                                    />
+                                    <span class="radio-text"
+                                        >Espacio 8</span
+                                    >
+                                </label>
+                            </div>
+                        </article>
+
+                        <article class="form-item">
+                            <label for="message"
+                                >Comentarios adicionales</label
+                            >
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Alergias, preferencias de mesa, etc."
+                            ></textarea>
+                        </article>
+
+                        <button
+                            type="submit"
+                            class="submit-btn"
+                        >
+                            Reservar mesa
+                        </button>
+                    </form>
+                </section>
+
+                <!-- Map Section -->
+                <section class="map-section">
+                    <iframe
+                        class="map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.3612975647375!2d-3.988556290535578!3d36.73789793709838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72398abb3f7737%3A0x318c8c3c56229057!2sKiosco%20Fernando!5e0!3m2!1ses!2ses!4v1764103518399!5m2!1ses!2ses"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <section class="footer-content">
+                <!-- Información de Kiosko Fernando -->
+                <div class="footer-left">
+                    <p>Kiosko Fernando</p>
+                </div>
+                <!-- Derechos de autor -->
+                <div class="footer-center">
+                    <p>Todos los derechos reservados © 2025</p>
+                </div>
+                <!-- Redes sociales -->
+                <div class="footer-right">
+                    <ul class="social-links">
+                        <li>
+                            <a href="#">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#">TikTok</a>
+                        </li>
+                        <li>
+                            <a href="#">Facebook</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>

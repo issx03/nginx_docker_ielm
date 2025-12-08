@@ -1,0 +1,94 @@
+/* Header */
+header {
+    background: var(--primary-medium);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo img {
+    max-height: 50px;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+nav {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+nav a {
+    /* Make the link position relative for the underline effect */
+    position: relative;
+    display: inline-block;
+    color: var(--primary-dark);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Arimo', sans-serif;
+    transition: all 0.3s ease;
+    padding: 8px 10px;
+    border-radius: 4px;
+}
+
+/* The underline effect for navigation links */
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: currentColor;
+    top: 50%;
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secondary-dark);
+    transform: scale(1.05);
+}
+
+nav a:hover::after {
+    transform: translateY(-50%) scaleX(1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo img {
+        max-width: 220px;
+        max-height: 80px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+}
