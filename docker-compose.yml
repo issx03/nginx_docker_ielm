@@ -2,21 +2,27 @@ services:
   app-content:
     # Busca el Dockerfile en la carpeta m1
     build: ./m1
+    # Nombre del contenedor
     container_name: app-content
+    # Red a la que pertenece
     networks:
       - nginx-net
 
   app-proxy:
     # Busca el Dockerfile en la carpeta m2
     build: ./m2
+    # Nombre del contenedor
     container_name: app-proxy
+    # Red a la que pertenece
     networks:
       - nginx-net
+    # Contenedor que depende de app-content
     depends_on:
       - app-content
     # Puerto del proxy
     ports:
       - "80:80"
-
+      
+# Red de nginx
 networks:
   nginx-net:
