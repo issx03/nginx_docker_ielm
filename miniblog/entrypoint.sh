@@ -3,11 +3,12 @@ set -e
 
 echo "🚀 Iniciando configuración automática del Miniblog..."
 
-# 1. Crear carpetas necesarias si no existen (cache y logs)
-if [ ! -d "var/cache" ]; then
-    echo "📂 Creando carpetas de caché y logs..."
-    mkdir -p var/cache var/logs cache
-fi
+# 1. Asegurar que las carpetas existen SIEMPRE (usamos -p)
+echo "📂 Creando/Verificando carpetas..."
+mkdir -p var/cache
+mkdir -p var/logs
+mkdir -p cache
+mkdir -p config
 
 # 2. Asignar permisos (777 para evitar problemas en el laboratorio)
 echo "🔒 Ajustando permisos..."
