@@ -1,0 +1,34 @@
+# --- Archivos de Sistema Operativo ---
+.DS_Store
+Thumbs.db
+*.swp
+
+# --- IDEs y Editores ---
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# --- Docker ---
+docker-compose.override.yml
+
+# --- Entregables de la Práctica ---
+P8_*/
+*.zip
+comprobacion.md
+
+# --- MINIBLOG (PHP) ---
+miniblog/html/vendor/
+miniblog/html/.env
+miniblog/html/.env.local
+*.db
+*.sqlite
+miniblog/html/config/app.db
+
+# Directorios de Caché y Logs generados por la aplicación
+miniblog/html/var/
+miniblog/html/cache/
+miniblog/html/logs/
+
+# Carpeta .git anidada
+miniblog/html/.git/
