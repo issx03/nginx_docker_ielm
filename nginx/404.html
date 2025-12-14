@@ -2,90 +2,129 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-        />
-        <title>404 - Plato no encontrado</title>
+        <title>404 Not Found</title>
         <style>
             body {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                background-color: #fdf6e3; /* Crema suave */
-                color: #5d4037; /* Marrón café */
+                background-color: #0f0f0f;
+                color: #33ff00;
+                font-family: 'Courier New', Courier, monospace;
                 height: 100vh;
                 margin: 0;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                text-align: center;
+                overflow: hidden;
             }
-            .container {
-                max-width: 600px;
-                padding: 40px;
+
+            .terminal-window {
+                width: 600px;
+                padding: 20px;
+                border: 2px solid #333;
+                background-color: #000;
+                box-shadow: 0 0 20px rgba(51, 255, 0, 0.2);
             }
+
+            .header {
+                border-bottom: 1px solid #333;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+                color: #666;
+                font-size: 0.8em;
+                display: flex;
+                justify-content: space-between;
+            }
+
             h1 {
-                font-size: 8rem;
-                margin: 0;
-                color: #d35400; /* Naranja quemado */
-                line-height: 1;
+                margin: 0 0 20px 0;
+                font-size: 4em;
+                text-shadow: 2px 2px 0px #003300;
             }
-            h2 {
-                font-size: 2rem;
-                margin-bottom: 20px;
-            }
+
             p {
-                font-size: 1.2rem;
-                color: #7f8c8d;
+                font-size: 1.2em;
+                line-height: 1.5;
             }
-            .emoji {
-                font-size: 5rem;
-                display: block;
-                margin-bottom: 20px;
-                animation: float 3s ease-in-out infinite;
+
+            .command {
+                color: #fff;
             }
-            .btn {
+
+            .cursor {
                 display: inline-block;
+                width: 10px;
+                height: 18px;
+                background-color: #33ff00;
+                animation: blink 1s infinite;
+                vertical-align: middle;
+            }
+
+            .nginx-footer {
                 margin-top: 30px;
-                padding: 15px 30px;
-                background-color: #d35400;
-                color: white;
-                text-decoration: none;
-                border-radius: 50px;
-                font-weight: bold;
-                transition: transform 0.2s, background-color 0.2s;
-                box-shadow: 0 4px 15px rgba(211, 84, 0, 0.3);
+                font-size: 0.7em;
+                color: #666;
+                text-align: right;
             }
-            .btn:hover {
-                transform: translateY(-2px);
-                background-color: #e67e22;
-            }
-            @keyframes float {
+
+            @keyframes blink {
                 0% {
-                    transform: translateY(0px) rotate(0deg);
+                    opacity: 1;
                 }
                 50% {
-                    transform: translateY(-15px) rotate(5deg);
+                    opacity: 0;
                 }
                 100% {
-                    transform: translateY(0px) rotate(0deg);
+                    opacity: 1;
                 }
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                border-bottom: 1px dashed #fff;
+            }
+            a:hover {
+                background-color: #fff;
+                color: #000;
             }
         </style>
     </head>
     <body>
-        <div class="container">
-            <span class="emoji">🍽️</span>
-            <h1>404</h1>
-            <h2>¡Oído cocina! Pero no tenemos ese plato.</h2>
+        <div class="terminal-window">
+            <div class="header">
+                <span>root@nginx-proxy:~</span>
+                <span>bash</span>
+            </div>
+
             <p>
-                Parece que la página que buscas se ha caído de la bandeja o
-                nunca estuvo en el menú.
+                <span style="color: #00ccff">root@nginx-proxy</span>:<span
+                    style="color: #0000ff"
+                    >~</span
+                ># <span class="command">curl GET $REQUEST_URI</span>
             </p>
-            <a
-                href="/"
-                class="btn"
-                >Volver a la Carta (Inicio)</a
-            >
+
+            <h1>Error 404</h1>
+
+            <p>
+                Resolving host... 127.0.0.1<br />
+                Connecting to server... Connected.<br />
+                Sending request... <span style="color: red">FAILED</span><br />
+                <span style="color: red"
+                    >Error: The requested URL was not found on this
+                    server.</span
+                >
+            </p>
+
+            <p>
+                <span style="color: #00ccff">root@nginx-proxy</span>:<span
+                    style="color: #0000ff"
+                    >~</span
+                ># <span class="cursor"></span>
+            </p>
+
+            <div class="nginx-footer">
+                <hr style="border-color: #333; margin-bottom: 5px" />
+                nginx/1.25.3 (Docker-Alpine)
+            </div>
         </div>
     </body>
 </html>
