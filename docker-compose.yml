@@ -1,44 +1,26 @@
 services:
-  # --- 1. KIOSKO (M1) ---
-  app-content:
-    build: ./m1
-    container_name: app-content
+  # --- MINIBLOG ---
+  miniblog:
+    build: ./miniblog
+    container_name: miniblog
     networks:
-      - nginx-net
+      - proxy-net
 
-  # --- 2. PROXY PRINCIPAL (M2) ---
-  app-proxy:
-    build: ./m2
-    container_name: app-proxy
-    networks:
-      - nginx-net
-    depends_on:
-      - app-content
-      - miniblog-web
-    ports:
-      - "80:80"
-
-  # --- 3. MINIBLOG WEB (Nginx interno) ---
-  miniblog-web:
+  # --- PROXY PRINCIPAL ---
+  proxy:
     image: nginx:alpine
-    container_name: miniblog-web
-    networks:
-      - nginx-net
+    container_name: nginx-proxy
     volumes:
-      - ./miniblog/conf/default.conf:/etc/nginx/conf.d/default.conf
-      - ./miniblog/html:/var/www/html
+      # Volumen para el archivo de configuración de NGINX
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      # Volumen para los recursos (Tipos MIME)
+      - ./assets:/var/www/html/assets
+    networks:
+      - proxy-net
+    ports:
+      - "8080:80"
     depends_on:
-      - miniblog-php
-
-  # --- 4. MINIBLOG PHP (Motor) ---
-  miniblog-php:
-    build:
-      context: ./miniblog
-    container_name: miniblog-php
-    networks:
-      - nginx-net
-    volumes:
-      - ./miniblog/html:/var/www/html
+      - miniblog
 
 networks:
-  nginx-net:
+  proxy-net:
